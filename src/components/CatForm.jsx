@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import pawAdd from "../pics/catPawAdd.png";
 
 function CatForm({ data, onAdd }) {
   const [newCat, setNewCat] = useState({
@@ -69,13 +70,14 @@ function CatForm({ data, onAdd }) {
         <div className="col-auto">
           <button
             className="btn btn-outline-success rounded-3"
+            title="Přidej kočku"
             disabled={!valid}
             onClick={() => {
               onAdd(newCat);
               resetNewCat();
             }}
           >
-            Přidej
+            <img src={pawAdd} width={27} height={27} />
           </button>
         </div>
       </div>

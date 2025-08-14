@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProgressBar.css";
 
 function ProgressBar({ dataIn, id }) {
   // Předpokládáme, že `value` je hodnota mezi 0 a 100

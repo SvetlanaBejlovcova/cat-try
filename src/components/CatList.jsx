@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./CatList.css";
+import pawDelete from "../pics/catPawDelete.png";
 
 const CatList = (props) => {
   const handleDelete = (cat) => {
@@ -6,17 +8,14 @@ const CatList = (props) => {
   };
 
   return (
-    <li
-      key={props.id}
-      className="list-group-item list-group-item-warning rounded-3"
-    >
+    <li key={props.id} className="cat-list list-group-item rounded-3">
       {props.name} - {props.breed}
       <button
-        className="btn-delete btn btn-outline-danger btn-sm ms-3 rounded-4"
-        title="Delete cat"
+        className="btn-delete btn btn-outline-light btn-sm ms-3 rounded-3"
+        title="Smaž kočku"
         onClick={() => handleDelete(props.cat)}
       >
-        X
+        <img src={pawDelete} width={27} height={27} />
       </button>
     </li>
   );

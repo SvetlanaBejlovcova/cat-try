@@ -1,0 +1,9 @@
+.cat-list {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(
+    180deg,
+    rgba(207, 205, 205, 0.85) 1%,
+    rgba(255, 215, 0, 1) 99%,
+    rgba(128, 128, 128, 1) 20%
+  );
+}
