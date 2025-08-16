@@ -104,7 +104,7 @@ function App() {
 
   return (
     <div className="page-container">
-      <h1 className="text-center font-monospace fw-bolder text-primary-emphasis">
+      <h1 className="text-center font-face-dancing fw-bold text-primary-emphasis m-3">
         Cat try
       </h1>
       <div>

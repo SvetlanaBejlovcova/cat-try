@@ -1,12 +1,17 @@
 import React, { useState } from "react";
-import pawAdd from "../pics/catPawAdd.png";
+import catPawGreen from "../pics/catPawGreen.png";
+import catPawGreenHover from "../pics/catPawGreenHover.png";
+import catPawDisabled from "../pics/catPawDisabled.png";
 
 function CatForm({ data, onAdd }) {
+  const [mouseOver, setMouseOver] = useState(false);
+
   const [newCat, setNewCat] = useState({
     id: data.length > 0 ? Math.max(...data.map((cat) => cat.id)) + 1 : 1,
     name: "",
     breed: "",
   });
+
   const [valid, setValid] = useState(false);
 
   const validateData = (cat) => {
@@ -68,17 +73,27 @@ function CatForm({ data, onAdd }) {
           />
         </div>
         <div className="col-auto">
-          <button
-            className="btn btn-outline-success rounded-3"
+          <input
+            type="image"
+            src={
+              !valid
+                ? catPawDisabled
+                : mouseOver && valid
+                ? catPawGreenHover
+                : catPawGreen
+            }
+            width={30}
+            height={30}
+            className="cat-paw-add"
             title="Přidej kočku"
             disabled={!valid}
             onClick={() => {
               onAdd(newCat);
               resetNewCat();
             }}
-          >
-            <img src={pawAdd} width={27} height={27} />
-          </button>
+            onMouseOver={() => setMouseOver(true)}
+            onMouseOut={() => setMouseOver(false)}
+          />
         </div>
       </div>
     </div>
