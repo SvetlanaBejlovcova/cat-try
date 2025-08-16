@@ -237,6 +237,9 @@ function App() {
         </div>
       </div>
       <Image source={wellness} id="wellness" enabled={show} width="100%" />
+      <footer className="text-primary-emphasis mt-3">
+        © Světlana Bejlovcová
+      </footer>
     </div>
   );
 }
