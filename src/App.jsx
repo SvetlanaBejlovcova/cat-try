@@ -103,7 +103,7 @@ function App() {
   };
 
   return (
-    <div className="page-container">
+    <div className="container">
       <h1 className="text-center font-face-dancing fw-bold text-primary-emphasis m-3">
         Cat try
       </h1>
@@ -114,7 +114,7 @@ function App() {
           vypily {`${initialCountDown - countDown}`} ml.
         </p>
       </div>
-      <div className="page-toggler my-3">
+      <div className="page-toggler d-flex align-items-center my-3">
         <button
           className={`toggler-btn btn btn-outline-primary rounded-3 me-3 ${
             activeTab === 1 ? "active" : ""
