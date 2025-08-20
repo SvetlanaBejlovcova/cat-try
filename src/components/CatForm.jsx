@@ -75,6 +75,7 @@ function CatForm({ data, onAdd }) {
         <div className="col-auto">
           <input
             type="image"
+            //Změna ikony tlačítka (místo hover) - 3 varianty (catPawDisabled, catPawGreen, catPawGreenHover)
             src={
               !valid
                 ? catPawDisabled
@@ -91,8 +92,8 @@ function CatForm({ data, onAdd }) {
               onAdd(newCat);
               resetNewCat();
             }}
-            onMouseOver={() => setMouseOver(true)}
-            onMouseOut={() => setMouseOver(false)}
+            onMouseOver={() => setMouseOver(true)} //Změna ikony tlačítka (místo hover)
+            onMouseOut={() => setMouseOver(false)} //Změna ikony tlačítka (místo hover)
           />
         </div>
       </div>

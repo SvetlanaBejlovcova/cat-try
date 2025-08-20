@@ -21,8 +21,8 @@ const CatList = (props) => {
         className="cat-paw-delete align-middle ms-3"
         title="Smaž kočku"
         onClick={() => handleDelete(props.cat)}
-        onMouseOver={() => setMouseOver(true)}
-        onMouseOut={() => setMouseOver(false)}
+        onMouseOver={() => setMouseOver(true)} //Změna ikony tlačítka (místo hover)
+        onMouseOut={() => setMouseOver(false)} //Změna ikony tlačítka (místo hover)
       />
     </li>
   );
